@@ -1,0 +1,15 @@
+The EX-Motorshield8874 is licenced under CERN-OHL-W. This licence does not grant the right to use any trademarks held by DCC-EX or semify, including logos.
+The usage of the logos of DCC-EX and semify on a produced PCB is permitted under the following conditions:
+(1) The production must be non-commercial.
+(2) The licencee may not produce more than 10 Shields or derived products per year. Any larger production runs may be considered commercial.
+(3) The licencee may not make any changes to the source files. This explicitly also forbids the licencee from adding any additional logos or strings.
+
+In any other cases please contact the DCC-EX team regarding a licence for the DCC-EX logo, and/or service@semify-eda.com for usage of the semify logo.
+
+The DCC-EX logo may be removed from the silkscreen at any time. In this case a reference to the location of the source files maintained by DCC-EX must be placed on the PCB (e.g. "github.com/DCC-EX/EX-Hardware/tree/main/EX-MotorShield_8874")
+
+The semify logo may be removed from the silkscreen at any time.
+
+The string "RoHS" must be removed if any parts or processes that are not RoHS-certified are used. This explicitly includes the use of lead solder.
+
+Removing a logo, or updating BOM entries with functionally similar replacement components (including different connector types) exemtps the licencee from having to disclose the modified source files under the CERN-OHL-W licence, if and only if these are the only modifications made.
