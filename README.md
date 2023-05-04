@@ -14,7 +14,9 @@ This Shield features a green status LED which provides a visual indication of th
 
 ### Compatibility with [Arduino Motor Shield Rev3](https://store.arduino.cc/products/arduino-motor-shield-rev3)
 
-The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield but provides significantly improved electrical performance for driving higher loads. The supply voltage range is 9-30VDC (instead of 5-12VDC) and the maximum peak output is 5A per channel, and only slightly less continuous (instead of 2A peak, 1.3A continuous). There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-20VDC is recommended depending on scale.
+The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield but provides significantly improved electrical performance for driving higher loads. The supply voltage range is 9-30VDC (instead of 5-12VDC) and the maximum peak output is 5A per channel, and only slightly less continuous (instead of 2A peak, 1.3A continuous).
+
+There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-20VDC is recommended depending on scale.
 
 ## Default Pin Assignment for DCC-EX/Arduino motor control
 
