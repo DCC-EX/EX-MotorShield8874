@@ -95,7 +95,7 @@ LEDs are provided for each channel, indicating the corresponding H-Bridge is sup
 
 ## Stacking multiple boards
 
-It is possibile to stack two EX-MotorShield8874s. There are two different operating modes possible.
+It is possibile to stack two EX-MotorShield8874s, though as yet this is not fully tested and supported in DCC-EX EX-CommandStation. There are two different operating modes possible.
 
 ![Produktfoto_3_4](https://user-images.githubusercontent.com/52371300/231068582-4eb4e3a1-c307-405c-8cc4-71c3db39e954.jpg)
 
