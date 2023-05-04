@@ -21,7 +21,7 @@ The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield 
 The EX-MotorShield8874 has the following default pin assignment for control pins on the Arduino header, and is used for full Arduino Motor Shield R3 compatibility when used for DCC-EX EX-CommandStation.
 
 | Function | Channel A Pin | Channel B Pin |
-|-----------|-------|
+|-----------|-------|-------|
 | PWM       | D3  | D11 |
 | Direction | D12 | D12 |
 | Brake     | D9  | D8 |
@@ -35,7 +35,7 @@ Default pin assignment is used for DCC-EX command stations, and has the DRV8874 
 All motor control signals can be connected to two different Adruino header pins. Selecting between the default pin out and the alternative pin out is done via solder jumpers on the PCB which must be first cut to disable the default position, then solder applied to select the alternate position.
 
 | Function | Channel A Pin | Channel B Pin |
-|-----------|-------|
+|-----------|-------|-------|
 | PWM       | D2  | D5 |
 | Direction | D10 | D4 |
 | Brake     | D7  | D6 |
