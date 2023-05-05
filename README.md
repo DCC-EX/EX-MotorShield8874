@@ -96,9 +96,11 @@ LEDs are provided for each channel, indicating the corresponding H-Bridge is sup
 
 The following pin assignments have been used for the various connectors.
 
-### Expansion Headers
+### I2C Headers
 
 Three I2C expansion headers (Dupont, dual-row 8-pin, and STEMMA QT/Qwiic) allow connecting either an OLED display or other additional I2C based devices.
+
+#### Arduino Header
 
 On the Arduino header, the default upper right I2C pins are used for I2C:
 
@@ -106,6 +108,8 @@ On the Arduino header, the default upper right I2C pins are used for I2C:
 |-----------|-------|-------|
 | SCL | D18/A5 | D21 |
 | SDA | D19/A4 | D20 |
+
+#### DIP Header
 
 The dual-row 8-pin header has the following pin assignments:
 
@@ -116,7 +120,9 @@ The dual-row 8-pin header has the following pin assignments:
 | GND | 5 | 6 |
 | SCL | 7 | 8 |
 
-The single-row 4-pin OLED header has the following pin assignments, which are standard for many OLED displays:
+#### OLED Header
+
+The single-row 4-pin OLED header has the following pin assignments, which are standard for many I2C capable OLED displays:
 
 | Function | Pin |
 |-----------|-------|
@@ -124,6 +130,8 @@ The single-row 4-pin OLED header has the following pin assignments, which are st
 | IOREF | 2 |
 | SCL | 3 |
 | SDA | 4 |
+
+#### STEMMA QT/Qwiic Connector
 
 STEMMA QT/Qwiic connector pin assignments are per the standard, but included for completeness:
 
@@ -142,7 +150,7 @@ A reset button is provided to reset the Arduino board.
 
 ## Stacking multiple boards
 
-It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested and supported by software configuration. There are two different operating modes possible.
+It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration. There are two different proposed operating modes possible.
 
 ![Produktfoto_3_4](https://user-images.githubusercontent.com/52371300/231068582-4eb4e3a1-c307-405c-8cc4-71c3db39e954.jpg)
 
