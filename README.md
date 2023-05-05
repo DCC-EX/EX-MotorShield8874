@@ -52,7 +52,7 @@ NB: For DCC-EX control, these are not ideal pin assignments and are intended for
 
 The H-Bridges are protected against supply undervoltage, charge pump undervoltage, output overcurrent and device overtemperature. Fault conditions are indicated on the pin `nFAULT` of the H-Bridge driver. The open drain output of the fault indicator is pulled low during a fault condition and pulled to high with the on board pull-up resistor. There is one fault indicator per channel.
 
-**NOTE for UNO users:** the `nFAULT` pins are routed to the same pins used for I2C on the ATMEGA329P used on the Arduino UNO R3. As such, if you are to use an EX-MotorShield8874 on an Arduino UNO, please cut the default track on the relevant jumpers to disable them. If you want to use the `nFault` pins you will need to manually jumper them to any available alternate digital input pins, then configure the Motor Driver entry in EX-CommandStation to suit the pins used.
+**NOTE for UNO users:** the `nFAULT` pins are routed to the same pins used for I2C on the ATMEGA329P used on the Arduino UNO R3, namely A4 and A5. As such, if you are to use an EX-MotorShield8874 on an Arduino UNO, please cut the default track on the relevant jumpers to disable them. If you want to use the `nFault` pins you will need to manually jumper them to any available alternate digital input pins, then configure the Motor Driver entry in EX-CommandStation to suit the pins used.
 
 ### Alternative pin assignment for other motor control applications
 
@@ -81,7 +81,7 @@ The DCC-EX Motor Shield provides the following electrical parameters.
 | Control modes possible | PWM, by default, PH/EN via jumper |
 
 
-## Current sensing
+## Current Sensing
 
 Current sensing is independently available for each channel. The Arduino IOREF supply voltage is sensed automatically, and adjusts the gain factor for the current sensing to take advantage of the full ADC input voltage range for 5V or 3.3V microcontrollers. The sense factors are calculated as follows for DCC-EX motor driver definitions:
 
@@ -89,6 +89,8 @@ Current sensing is independently available for each channel. The Arduino IOREF s
 |----------------|----|-----|
 | 10-bit ADC, 1024 count | 5.08 | 4.94 |
 | 12-bit ADC, 4096 count | 1.27 | 1.24 |
+
+These values have been incorporated into EX-CommandStation's Motor Driver definitions, so selecting `EX8874_SHIELD` as the `MOTOR_SHIELD_TYPE` in config.h will configure it correctly.
 
 ## Track LEDs
 
