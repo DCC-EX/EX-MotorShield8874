@@ -46,7 +46,7 @@ All motor control signals can be connected to two different Adruino header pins.
 | Current sensing | A2 | A3 |
 | Fault_N   | D0  | D1 |
 
-NB: For DCC-EX control, these are not ideal pin assignments. Further documentation updates will be available once testing of this mode is complete.
+NB: For DCC-EX control, these are not ideal pin assignments and are intended for future support of stacking of two shields. Further documentation updates will be available once testing of this mode is complete.
 
 ### Fault indicator
 
@@ -116,7 +116,7 @@ The dual-row 8-pin header has the following pin assignments:
 | GND | 5 | 6 |
 | SCL | 7 | 8 |
 
-The single-row 4-pin SIP header has the following pin assignments, which are standard for many OLED displays:
+The single-row 4-pin OLED header has the following pin assignments, which are standard for many OLED displays:
 
 | Function | Pin |
 |-----------|-------|
@@ -124,6 +124,15 @@ The single-row 4-pin SIP header has the following pin assignments, which are sta
 | IOREF | 2 |
 | SCL | 3 |
 | SDA | 4 |
+
+STEMMA QT/Qwiic connector pin assignments are per the standard, but included for completeness:
+
+| Function | Pin | Colour Code |
+|-----------|-------|-------|
+| GND | 1 | Black |
+| IOREF | 2 | Red |
+| SDA | 3 | Blue |
+| SCL | 4 | Yellow |
 
 Pull-up resistors for the I2C communication are not populated by default. If required, pull-up resistors (R101, R102) can be populated on the board, though this is typically not necessary.
 
@@ -133,15 +142,14 @@ A reset button is provided to reset the Arduino board.
 
 ## Stacking multiple boards
 
-It is possibile to stack two EX-MotorShield8874s, though as yet this is not fully tested and supported in DCC-EX EX-CommandStation. There are two different operating modes possible.
+It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested and supported by software configuration. There are two different operating modes possible.
 
 ![Produktfoto_3_4](https://user-images.githubusercontent.com/52371300/231068582-4eb4e3a1-c307-405c-8cc4-71c3db39e954.jpg)
 
-
 1. **Independent district mode:** The DCC-EX Motor Shields are controlled independently using different control signals. This allows a total 4 independent H-Bridges to be driven completely independently for separate DCC or DC PWM districts.
-2. **Parallel booster mode:** Both EX-MotorShield8874s are controlled with the same control signals so both H-bridges are running in parallel. This mode is used to increase the current capabilities of the 2 DCC or DC PWM districts.
+2. **Parallel booster mode:** Both EX-MotorShield8874s are controlled with the same control signals so both pairs of H-bridges are running in parallel. This mode is used to increase the current capabilities of the 2 DCC or DC PWM districts.
 
-The independent mode uses the following pin assignment for controlling the two channels of the second DCC-EX Motor Shield
+This information is provided for reference. Documentation will be updated when both of these modes are fully tested and configured in DCC-EX EX-CommandStation.
 
 ## Reference
 
