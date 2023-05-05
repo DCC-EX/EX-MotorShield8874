@@ -18,7 +18,9 @@ The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield 
 
 There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-20VDC is recommended depending on scale.
 
-## Default Pin Assignment for DCC-EX/Arduino motor control
+## Control Pin Assignments
+
+### Default Pin Assignment for DCC-EX/Arduino motor control
 
 The EX-MotorShield8874 has the following default pin assignment for control pins on the Arduino header, and is used for full Arduino Motor Shield R3 compatibility when used for DCC-EX EX-CommandStation.
 
