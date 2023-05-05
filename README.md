@@ -152,11 +152,13 @@ Pull-up resistors for the I2C communication are not populated by default. If req
 
 A reset button is provided to reset the Arduino board.
 
-## Stacking multiple boards
+## Stacking Multiple Shields
 
-It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration. There are two different proposed operating modes possible.
+It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration.
 
 ![Produktfoto_3_4](https://user-images.githubusercontent.com/52371300/231068582-4eb4e3a1-c307-405c-8cc4-71c3db39e954.jpg)
+
+There are two different proposed operating modes possible:
 
 1. **Independent district mode:** The DCC-EX Motor Shields are controlled independently using different control signals. This allows a total 4 independent H-Bridges to be driven completely independently for separate DCC or DC PWM districts.
 2. **Parallel booster mode:** Both EX-MotorShield8874s are controlled with the same control signals so both pairs of H-bridges are running in parallel. This mode is used to increase the current capabilities of the 2 DCC or DC PWM districts.
