@@ -52,6 +52,8 @@ NB: For DCC-EX control, these are not ideal pin assignments and are intended for
 
 The H-Bridges are protected against supply undervoltage, charge pump undervoltage, output overcurrent and device overtemperature. Fault conditions are indicated on the pin `nFAULT` of the H-Bridge driver. The open drain output of the fault indicator is pulled low during a fault condition and pulled to high with the on board pull-up resistor. There is one fault indicator per channel.
 
+**NOTE for UNO users:** the `nFAULT` pins are routed to the same pins used for I2C on the ATMEGA329P used on the Arduino UNO R3. As such, if you are to use an EX-MotorShield8874 on an Arduino UNO, please cut the default track on the relevant jumpers to disable them. If you want to use the `nFault` pins you will need to manually jumper them to any available alternate digital input pins, then configure the Motor Driver entry in EX-CommandStation to suit the pins used.
+
 ### Alternative pin assignment for other motor control applications
 
 The alternative pin assignment for motor control (PH/EN mode) allows to control the motor in a speed and direction type interface. This mode is selected via Jumper J101 (DRV8874 mode select pin `PMODE` = low) and is NOT required for use with DCC-EX. It is documented for completeness.
