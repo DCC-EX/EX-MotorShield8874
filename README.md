@@ -95,15 +95,6 @@ LEDs are provided for each channel, indicating the corresponding H-Bridge is sup
 ## Header Pin Assignments
 
 The following pin assignments have been used for the various connectors.
-### Arduino Headers
-
-| Function | Left Header Pin |
-|-----------|-------|
-| IOREF | 1 |
-| SDA | 3 |
-| GND | 5 |
-| SCL | 7 |
-
 
 ### Expansion Headers
 
@@ -113,8 +104,8 @@ On the Arduino header, the default upper right I2C pins are used for I2C:
 
 | Function | UNO R3 Pin | Mega Pin |
 |-----------|-------|-------|
-| SCL | D18 | D21 |
-| SDA | D19 | D20 |
+| SCL | D18/A5 | D21 |
+| SDA | D19/A4 | D20 |
 
 The dual-row 8-pin header has the following pin assignments:
 
@@ -125,6 +116,14 @@ The dual-row 8-pin header has the following pin assignments:
 | GND | 5 | 6 |
 | SCL | 7 | 8 |
 
+The single-row 4-pin SIP header has the following pin assignments, which are standard for many OLED displays:
+
+| Function | Pin |
+|-----------|-------|
+| GND | 1 |
+| IOREF | 2 |
+| SCL | 3 |
+| SDA | 4 |
 
 Pull-up resistors for the I2C communication are not populated by default. If required, pull-up resistors (R101, R102) can be populated on the board, though this is typically not necessary.
 
