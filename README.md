@@ -160,15 +160,21 @@ Various PCB jumpers are provided to alter functionality of the board to suit use
 
 ![Alternate_Pin_Assignments](./static_images/ex8874-pin-assignments.jpg)
 
-There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions.
+There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions. The table below lists them in order as they appear on the PCB:
 
-| Function | DRVR A Default | Driver A Alternate| Driver B Default | Driver B Alternate |
+| Function | Driver A Default | Driver A Alternate| Driver B Default | Driver B Alternate |
 |----------|---------|----------|---------|-----------|
 | PWM       | D3  | D2 | D11 | D5 |
-| FAULT | A4  | D0 | A5 | D1 |
-| BRAKE | D9  | D7 | D8 | D6 |
-| DIRECTION | D12 | D10 | D13 | D4 |
-| CURRENT | A0 | A2 | A1 | A3 |
+| Fault | A4  | D0 | A5 | D1 |
+| Brake | D9  | D7 | D8 | D6 |
+| Direction | D12 | D10 | D13 | D4 |
+| Current sense | A0 | A2 | A1 | A3 |
+
+### Power Configuration PCB Jumpers
+
+~[Power_Config_Jumpers](./static_images/ex8874-power-config.jpg)
+
+
 
 ## Stacking Multiple Shields
 
