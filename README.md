@@ -172,7 +172,7 @@ There are 5 sets of PCB jumpers for each motor driver IC, some or all of which c
 
 ### Power Configuration PCB Jumpers
 
-~[Power_Config_Jumpers](./static_images/ex8874-power-config.jpg)
+![Power_Config_Jumpers](./static_images/ex8874-power-config.jpg)
 
 
 
