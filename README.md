@@ -152,6 +152,16 @@ Pull-up resistors for the I2C communication are not populated by default. If req
 
 A reset button is provided to reset the Arduino board.
 
+## PCB Jumpers
+
+Various PCB jumpers are provided to alter functionality of the board to suit user needs. These include jumpers to alter pin assignments for driving the motor shield, to disable the onboard 7.2V regulator or disconnect it from the VIN, and jumpers to override the IOREF pin for ADC range selection.
+
+### Aternate Pin Assignment PCB Jumpers
+
+![Alternate Pin Assignments] (static_images/Semify EX8874 pin assignments.jpg)
+
+There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions.
+
 ## Stacking Multiple Shields
 
 It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration.
@@ -164,6 +174,8 @@ There are two different proposed operating modes possible:
 2. **Parallel booster mode:** Both EX-MotorShield8874s are controlled with the same control signals so both pairs of H-bridges are running in parallel. This mode is used to increase the current capabilities of the 2 DCC or DC PWM districts.
 
 This information is provided for reference. Documentation will be updated when both of these modes are fully tested and configured in DCC-EX EX-CommandStation.
+
+***CAUTIONARY NOTE:*** Only one EX-MotorShield8874 should provide VIN power to the underlying motherboard from the DCC power feed! The jumper connecting the VIN feed pin from the onboard 7.2V regulator to the Arduino sheild connectors must be cut on one of the stacked shields.
 
 ## Reference
 
