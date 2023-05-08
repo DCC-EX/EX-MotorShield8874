@@ -162,6 +162,15 @@ Various PCB jumpers are provided to alter functionality of the board to suit use
 
 There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions.
 
+|          | Driver A | | Driver B | |
+| Function | Default | Alternate| Default | Alternate |
+|----------|---------|----------|---------|-----------|
+| PWM       | D3  | D2 | D11 | D5 |
+| FAULT | A4  | D0 | A5 | D1 |
+| BRAKE | D9  | D7 | D8 | D6 |
+| DIRECTION | D12 | D10 | D13 | D4 |
+| CURRENT | A0 | A2 | A1 | A3 |
+
 ## Stacking Multiple Shields
 
 It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration.
