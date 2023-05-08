@@ -162,8 +162,7 @@ Various PCB jumpers are provided to alter functionality of the board to suit use
 
 There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions.
 
-|          | Driver A | | Driver B | |
-| Function | Default | Alternate| Default | Alternate |
+| Function | DRVR A Default | Driver A Alternate| Driver B Default | Driver B Alternate |
 |----------|---------|----------|---------|-----------|
 | PWM       | D3  | D2 | D11 | D5 |
 | FAULT | A4  | D0 | A5 | D1 |
