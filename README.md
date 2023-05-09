@@ -172,9 +172,17 @@ There are 5 sets of PCB jumpers for each motor driver IC, some or all of which c
 
 ### Power Configuration PCB Jumpers
 
-![Power_Config_Jumpers](./static_images/ex8874-power-config.jpg)
+There are 4 sets of PCB jumpers to change the way power is handled on the board. One on the top of the board, and 3 on the bottom, shown here:
 
+![Bottom_Power_Config_Jumpers](./static_images/ex8874-power-config.jpg)
+![Top_Power_Config_Jumper](./static_images/ex8874-power-config-top.jpg)
 
+| Jumper | Function |
+|--------|----------|
+| Regulator Enable | Defaults to ENABLED, cut between pads to DISABLE |
+| IOREF Override | Defaults to IOREF, cut then solder to either 5V or 3V to power logic and current sense |
+| VIN | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
+| Regulator to VIN (unlabelled) | Defaults to ON, providing 7.2V power from regulator to VIN and down to the Arduino |
 
 ## Stacking Multiple Shields
 
@@ -189,7 +197,7 @@ There are two different proposed operating modes possible:
 
 This information is provided for reference. Documentation will be updated when both of these modes are fully tested and configured in DCC-EX EX-CommandStation.
 
-***CAUTIONARY NOTE:*** Only one EX-MotorShield8874 should provide VIN power to the underlying motherboard from the DCC power feed! The jumper connecting the VIN feed pin from the onboard 7.2V regulator to the Arduino sheild connectors must be cut on one of the stacked shields.
+***CAUTIONARY NOTE:*** Only one EX-MotorShield8874 should provide power to the underlying motherboard from the DCC power feed! The jumper connecting the VIN feed pin from the onboard 7.2V regulator to the Arduino sheild connectors must be cut on one of the stacked shields. It is also advisable to cut the ENABLE pin for the onboard regulator as that will turn it off completely as well.
 
 ## Reference
 
