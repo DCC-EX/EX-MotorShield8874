@@ -174,7 +174,7 @@ There are 5 sets of PCB jumpers for each motor driver IC, some or all of which c
 
 There are 4 sets of PCB jumpers to change the way power is handled on the board. One on the top of the board, and 3 on the bottom, shown here:
 
-<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex8874-power-config.jpg"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex8874-power-config-top.jpg" height="19" width="19%">
+<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex8874-power-config.jpg"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex8874-power-config-top.jpg" height="20" width="20%">
 
 | Jumper | Function |
 |--------|----------|
@@ -186,7 +186,7 @@ There are 4 sets of PCB jumpers to change the way power is handled on the board.
 ## Bill of Materials (BOM)
 
 The bill of materials spreadsheet above is optimised for manufacture at JLCPCB (https://jlcpcb.com/) at present, and will allow assembly of all components except the DC barrel jack, motor output connectors and Arduino shield stackable headers.
- 
+
 ## Stacking Multiple Shields
 
 It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration.
