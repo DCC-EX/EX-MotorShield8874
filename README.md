@@ -16,7 +16,7 @@ This Shield features a green status LED which provides a visual indication of th
 
 The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield but provides significantly improved electrical performance for driving higher loads. Input voltage range is 9-30VDC and the maximum peak output is 5A per channel, in contrast to 5-12VDC and 2A peak for the original Arduino Motor Shield.
 
-There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-20VDC is recommended depending on scale.
+There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-24VDC is recommended depending on scale.
 
 ## Control Pin Assignments
 
@@ -142,9 +142,11 @@ STEMMA QT/Qwiic connector pin assignments are per the standard, but included for
 | Function | Pin | Colour Code |
 |-----------|-------|-------|
 | GND | 1 | Black |
-| IOREF | 2 | Red |
+| 3v3 | 2 | Red |
 | SDA | 3 | Blue |
 | SCL | 4 | Yellow |
+
+**NOTE** STEMMA QT power is tied to 3v3 as that is required for the standard. When using the EX-MotorShield8874 with 5V motherboards such as UNO and Mega, any I2C peripherals connected to the STEMMA QT connector **must** be 5V-tolerant only!
 
 Pull-up resistors for the I2C communication are not populated by default. If required, pull-up resistors (R101, R102) can be populated on the board, though this is typically not necessary.
 
@@ -179,7 +181,7 @@ There are 4 sets of PCB jumpers to change the way power is handled on the board.
 | Jumper | Function |
 |--------|----------|
 | Regulator Enable | Defaults to ENABLED, cut between pads to DISABLE onboard 7.2V regulator |
-| IOREF Override | Defaults to IOREF used as power source, cut and then solder to either 5V or 3V to power logic and current sense |
+| IOREF Override | Defaults to IOREF used as power source, cut and then solder to either 5V or 3V3 to power logic and current sense |
 | VIN | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
 | Regulator to VIN (unlabelled) | Defaults to ON, cut to stop providing regulated 7.2V power to VIN to power the Arduino |
 
