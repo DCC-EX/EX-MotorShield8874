@@ -18,6 +18,24 @@ The EX-MotorShield8874 is pin compatible with the original Arduino Motor Shield 
 
 There is also almost no voltage drop incurred from the input voltage due to the MOSFET based design, unlike the bipolar L298 used in the Arduino Motor Shield. For DCC and DC PWM model railway use, a range of 10-24VDC is recommended depending on scale.
 
+### Motor Driver Configuration for DCC-EX EX-CommandStation
+
+The EX-MotorShield8874 will work with the `STANDARD_MOTOR_SHIELD` definitions in `MotorDrivers.h`, but that is not ideal for several reasons. It will both unnecessarily limit current output, ignore the fault pin, and not read current correctly.
+
+The following motor definitions are required, and appear in later versions of EX-CommandStation, with the tag `EX8874_SHIELD`, which will differ according to whether the Command Station is an UNO or Mega with 5V 10-bit ADC, or a 3.3V capable system with 12-bit ADC:
+
+```c++
+// EX 8874 based shield connected to a 5V system (like Arduino UNO/Mega) and 10bit (1024) ADC
+#define EX8874_SHIELD F("EX8874"), \
+ new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 5.08, 5000, -A4), \
+ new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 5.08, 5000, -A5)
+
+// EX 8874 based shield connected to a 3V3 system with 12-bit (4096) ADC
+#define EX8874_SHIELD F("EX8874"), \
+ new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 1.27, 5000, -A4), \
+ new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 1.27, 5000, -A5)
+```
+
 ## Control Pin Assignments
 
 ### Default Pin Assignment for DCC-EX/Arduino motor control
@@ -90,7 +108,7 @@ Current sensing is independently available for each channel. The Arduino IOREF s
 | 10-bit ADC, 1024 count | 5.08 | 4.94 |
 | 12-bit ADC, 4096 count | 1.27 | 1.24 |
 
-These values have been incorporated into EX-CommandStation's Motor Driver definitions, so selecting `EX8874_SHIELD` as the `MOTOR_SHIELD_TYPE` in config.h will configure it correctly.
+These values have been incorporated into EX-CommandStation Motor Driver definitions, so selecting `EX8874_SHIELD` as the `MOTOR_SHIELD_TYPE` in config.h will configure it correctly.
 
 ## Track LEDs
 
@@ -185,9 +203,15 @@ There are 4 sets of PCB jumpers to change the way power is handled on the board.
 | VIN | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
 | Regulator to VIN (unlabelled) | Defaults to ON, cut to stop providing regulated 7.2V power to VIN to power the Arduino |
 
-## Bill of Materials (BOM)
+## Manufacturing Notes
+
+### Bill of Materials (BOM)
 
 The bill of materials spreadsheet above is optimised for manufacture at JLCPCB (https://jlcpcb.com/) at present, and will allow assembly of all components except the DC barrel jack, motor output connectors and Arduino shield stackable headers.
+
+### PCB Material Specifications
+
+For best performance, 1oz copper for both outer and inner layers of this 4-layer PCB are safest. Of course 2oz copper can be specified, but this is not deemed necessary from testing so far and cost may be prohibitive. Also, using FR-4 TG155 will give additional safety margin. The design can be made lead-free, provided all components are also lead-free types. JLCPCB currently does not have lead-free connectors for DCC track or DC input power, so those components are not in the default Bill of Materials (BOM).
 
 ## Stacking Multiple Shields
 
