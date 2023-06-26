@@ -6357,7 +6357,7 @@
     (property "Value" "Barrel_Jack_MountingPin" (at 35.56 34.29 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "_my:BarrelJack_2.1mm" (at 36.83 41.656 0)
+    (property "Footprint" "_my:BarrelJack_2.1mm_SMD" (at 36.83 41.656 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 36.83 41.656 0)
@@ -6369,9 +6369,9 @@
     (property "rohs_cert_or_in_datasheet" "n" (at 35.56 40.64 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 11370a88-e322-42cd-91d1-aa1ff91a623b))
-    (pin "2" (uuid 885c6da6-ce15-48b8-b6cb-dfd2b1de5299))
-    (pin "MP" (uuid 7d1ec3c3-94f9-4a41-becc-877528478094))
+    (pin "1" (uuid 59703811-dc7a-4623-a2b7-1a63b4a8ed8f))
+    (pin "2" (uuid 2be1dd35-b3c8-4c9c-9e6e-2a8564f39348))
+    (pin "MP" (uuid 0f5726bd-65a2-4f98-9a9e-d2ad1e19016b))
     (instances
       (project "motor-shield"
         (path "/0cbffc97-6856-4b34-94fa-39a0ff6f1c2b/0e7b2dd9-9964-452e-aea9-a5407953fde9"
@@ -6968,7 +6968,7 @@
     (property "Value" "-" (at 68.58 41.9099 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "_my:PinHeader_01x03_P2.5mm_Vertical_min" (at 66.04 39.37 0)
+    (property "Footprint" "_my:PinHeader_01x02_P5mm_Vertical_min" (at 66.04 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 66.04 39.37 0)
@@ -6977,8 +6977,8 @@
     (property "rohs_cert_or_in_datasheet" "" (at 66.04 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b4c2caae-4785-4f47-af4f-b43a95085d7e))
-    (pin "2" (uuid 5d690ffb-9a62-4b4b-a4c1-075f9b6ae3b2))
+    (pin "1" (uuid ac0802be-5a6c-4435-9f88-6c94c2369cd5))
+    (pin "2" (uuid 2e931788-cc10-4015-bb8e-d8834a7be610))
     (instances
       (project "motor-shield"
         (path "/0cbffc97-6856-4b34-94fa-39a0ff6f1c2b/0e7b2dd9-9964-452e-aea9-a5407953fde9"
@@ -7344,7 +7344,7 @@
     (property "Value" "-" (at 68.58 33.0199 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "_my:PinHeader_1x02_P2.54mm_Vertical_min" (at 66.04 30.48 0)
+    (property "Footprint" "_my:PinHeader_1x04_P2.54mm_Vertical_min_1" (at 66.04 30.48 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 66.04 30.48 0)
