@@ -27,13 +27,13 @@ The following motor definitions are required, and appear in later versions of EX
 ```c++
 // EX 8874 based shield connected to a 5V system (like Arduino UNO/Mega) and 10bit (1024) ADC
 #define EX8874_SHIELD F("EX8874"), \
- new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 5.08, 5000, -A4), \
- new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 5.08, 5000, -A5)
+ new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 5.08, 5000, A4), \
+ new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 5.08, 5000, A5)
 
 // EX 8874 based shield connected to a 3V3 system with 12-bit (4096) ADC
 #define EX8874_SHIELD F("EX8874"), \
- new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 1.27, 5000, -A4), \
- new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 1.27, 5000, -A5)
+ new MotorDriver( 3, 12, UNUSED_PIN, 9, A0, 1.27, 5000, A4), \
+ new MotorDriver(11, 13, UNUSED_PIN, 8, A1, 1.27, 5000, A5)
 ```
 
 ## Control Pin Assignments
