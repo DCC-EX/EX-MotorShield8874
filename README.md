@@ -228,6 +228,23 @@ This information is provided for reference. Documentation will be updated when b
 
 ***CAUTIONARY NOTE:*** Only one EX-MotorShield8874 should provide power to the underlying motherboard from the DCC power feed! The jumper connecting the top VIN feed pin from the onboard 7.2V regulator to the Arduino sheild connectors must be cut on one of the stacked shields. It is also advisable to cut the ENABLE pin for the onboard regulator as that will turn it off completely as well. (See documentation of Power Configuration PCB Jumpers, above!)
 
+## Version History
+
+**Rev B2**
+* Changed the AOD4185 reverse voltage protection mosfet (Q201) in a TO-252-2 package to an AO4407C in an SOIC-8 package to save board space.
+
+**Rev B**
+* Changed 7.2V Regulator from MP9942GJ-Z to TPS54302 due to availability issues. NOTICE: This forced the Regulator Enable/Disable to be reversed from the Rev A board. The Rev A board jumper pad must be *cut* to disable the regulator and is named "Regulator Enable". On the Rev B board, the jumper must be *solder bridged* to to disable the regulator and is labelled "7V Regulator Disable".
+* The regulator change necessitated changing Inductor L201 from 56uH to 15uH.
+
+**Rev A2**
+* Added 47k pulldown resistors (R103 and R104) to the enable pins to prevent possible DCC or DC voltage pulses to the outputs until the command station is able to set the GPIO pins to a stable state during boot up.
+* Added more descriptive silkscreen labelling.
+* Removed solder mask from jumper pads to make it easier to see which are bridged and which are open.
+
+**Rev A**
+* First version of the EX-MotorShield8874. NOTICE: It may be necessary to add 47k pulldown resistors between pwm_a and pwm_b and GND. These are the "enable" pins that turn power on to the track outputs. With the pins floating, it is possible that brief DC power can be applied to the track until the command station fully boots. If configured for the STANDARD_MOTOR_SHIELD, this is as simple as inserting one end of a resistor into pin 3 of the header and the other end to a GND header pin, and the other resister between pin 11 and GND. If using a different motor driver definition, use the enable pins for that definition.
+
 ## Reference
 
 - [Schematic](https://github.com/semify-eda/motor-shield/blob/main/motor-shield.pdf)
