@@ -247,7 +247,7 @@ This information is provided for reference. For full documentation, please visit
 
 ## Reference
 
-- [Schematic](https://github.com/semify-eda/motor-shield/blob/main/motor-shield.pdf)
+- [Schematic](./static_images/EX-MotorShield8874Schematic_RevB2.pdf)
 - [DRV8874 Datasheet](https://www.ti.com/product/DRV8874?keyMatch=DRV8874&tisearch=search-everything&usecase=GPN)
 
  
