@@ -194,7 +194,7 @@ There are 5 sets of PCB jumpers for each motor driver IC, some or all of which c
 
 There are 4 sets of PCB jumpers to change the way power is handled on the board. One on the top of the board, and 3 on the bottom, shown here:
 
-<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex_motorshield_power_config-jumpers_bottom.png"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex_motorshield_power_config_jumper_top.png" height="60%" width="60%">
+<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex_motorshield_power_config-jumpers_bottom.png"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex_motorshield_power_config_jumper_top.png" height="10%" width="10%">
 
 | Jumper | Function |
 |--------|----------|
