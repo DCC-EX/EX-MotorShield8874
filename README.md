@@ -1,7 +1,7 @@
 # EX-Motorshield8874
 
 ## Overview
-![Produktfoto_3_1](https://user-images.githubusercontent.com/52371300/231068292-36178ca7-ed09-493d-87c2-605b19090bf4.jpg)
+<img alt="DCC-EX EX-MotorShield8874" src="./static_images/ex_motorshield8874_front_blue.jpg">
 
 The EX-Motorshield8874 is a pin compatible with the original [Arduino Motor Shield Rev3](https://store.arduino.cc/products/arduino-motor-shield-rev3) but provides significantly improved electrical performance for driving higher loads, with lower power dissipation, and improved usability.
 
