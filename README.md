@@ -194,11 +194,11 @@ There are 5 sets of PCB jumpers for each motor driver IC, some or all of which c
 
 There are 4 sets of PCB jumpers to change the way power is handled on the board. One on the top of the board, and 3 on the bottom, shown here:
 
-<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex8874-power-config.jpg"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex8874-power-config-top.jpg" height="19%" width="19%">
+<img alt="Bottom_Power_Config_Jumpers" src="./static_images/ex_motorshield_power_config-jumpers_bottom.png"> <img alt="Top_Power_Config_Jumper" src="./static_images/ex8874-power-config-top.jpg" height="19%" width="19%">
 
 | Jumper | Function |
 |--------|----------|
-| Regulator Enable | Defaults to ENABLED, cut between pads to DISABLE onboard 7.2V regulator |
+| Regulator Enable | Defaults to ENABLED, Rev B boards, solder between pads to DISABLE onboard 7.2V regulator. Rev A boards cut between pads to DISABLE |
 | IOREF Override | Defaults to IOREF used as power source, cut and then solder to either 5V or 3V3 to power logic and current sense |
 | VIN | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
 | Regulator to VIN (unlabelled) | Defaults to ON, cut to stop providing regulated 7.2V power to VIN to power the Arduino |
