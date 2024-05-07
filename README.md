@@ -215,7 +215,7 @@ For best performance, 1oz copper for both outer and inner layers of this 4-layer
 
 ## Stacking Multiple Shields
 
-It is possibile to stack two EX-MotorShield8874s, though for use in in DCC-EX EX-CommandStation this is not fully tested or yet supported by software configuration.
+It is possibile to stack two EX-MotorShield8874s, and even stack an EX-MotorShield and a Arduino Motor Shield.
 
 ![Produktfoto_3_4](https://user-images.githubusercontent.com/52371300/231068582-4eb4e3a1-c307-405c-8cc4-71c3db39e954.jpg)
 
@@ -224,9 +224,9 @@ There are two different proposed operating modes possible:
 1. **Independent district mode:** The DCC-EX Motor Shields are controlled independently using different control signals. This allows a total 4 independent H-Bridges to be driven completely independently for separate DCC or DC PWM districts.
 2. **Parallel booster mode:** Both EX-MotorShield8874s are controlled with the same control signals so both pairs of H-bridges are running in parallel. This mode is used to increase the current capabilities of the 2 DCC or DC PWM districts.
 
-This information is provided for reference. Documentation will be updated when both of these modes are fully tested and configured in DCC-EX EX-CommandStation.
-
 ***CAUTIONARY NOTE:*** Only one EX-MotorShield8874 should provide power to the underlying motherboard from the DCC power feed! The jumper connecting the top VIN feed pin from the onboard 7.2V regulator to the Arduino sheild connectors must be cut on one of the stacked shields. It is also advisable to cut the ENABLE pin for the onboard regulator as that will turn it off completely as well. (See documentation of Power Configuration PCB Jumpers, above!)
+
+This information is provided for reference. For full documentation, please visit this section on our website; [Stacking EX-MotorShields](https://dcc-ex.com/reference/hardware/motorboards/ex-motor-shield-8874.html#stacking-ex-motorshield8874s)
 
 ## Version History
 
