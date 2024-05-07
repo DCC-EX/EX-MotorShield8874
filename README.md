@@ -200,8 +200,8 @@ There are 4 sets of PCB jumpers to change the way power is handled on the board.
 |--------|----------|
 | Regulator Disable (Regulator Enable on Rev A boards) | Defaults to *ENABLED*. Rev B boards, *solder* between pads to DISABLE onboard 7.2V regulator. Rev A boards *cut* between pads to DISABLE |
 | IOREF Override | Defaults to IOREF used as power source, cut and then solder to either 5V or 3V3 to power logic and current sense |
-| VIN | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
-| VM to Vin Enable (unlabelled on Rev A boards) | Defaults to ON, cut to stop providing regulated 7.2V power to VIN to power the Arduino |
+| VM to Vin Enable (unlabelled on Rev A boards) | Defaults to NOT connected. CAUTION: soldering these pads CONNECTS motor power to VIN and should not be needed |
+| VIN | Defaults to ON, cut to stop providing regulated 7.2V power to VIN to power the Arduino |
 
 ## Manufacturing Notes
 
