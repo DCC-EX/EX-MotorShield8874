@@ -178,7 +178,7 @@ Various PCB jumpers are provided to alter functionality of the board to suit use
 
 ### Aternate Pin Assignment PCB Jumpers
 
-![Alternate_Pin_Assignments](./static_images/ex8874-pin-assignments.jpg)
+![Alternate_Pin_Assignments](./static_images/ex-motorshield-pin-assignment-jumpers.png)
 
 There are 5 sets of PCB jumpers for each motor driver IC, some or all of which can be used to reassign Arduino pins to the various logic functions. The table below lists them in order as they appear on the PCB:
 
